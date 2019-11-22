@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruit Cart</title>
+	<script src="/static/fruitds.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<h1 style="text-align: center;">FRUITS CART</h1><br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<label>Apple</label>
+				<img src="/static/image/apple.jpg" style="height: 20%; width: 20%">
+				<label>Price: Rs.20</label><br>
+				<p style="padding-left: 45px"><button type="submit" id = "btn-cart" onclick="cart1(this)">Add to Cart</button></p>			
+			</div>
+
+			<div class="col-md-4">
+				<label>Banana</label>
+				<img src="/static/image/banana.jpg" style="height: 20%; width: 20%">
+				<label>Price: Rs.10</label><br><br>
+				<p style="padding-left: 45px"><button type="submit" id = "btn-cart" onclick="cart2(this)">Add to Cart</button></p>						
+			</div>
+
+			<div class="col-md-4">
+				<label>Mango</label>
+				<img src="/static/image/mango.jpg" style="height: 20%; width: 20%">
+				<label>Price: Rs.50</label><br>
+				<p style="padding-left: 45px"><button type="submit" id = "btn-cart" onclick="cart3(this)">Add to Cart</button></p>
+			</div>
+		</div><br><br><br>
+		<div class="row" style="padding-left: 30%">
+			<div class="col-md-4">
+				<label>Pomegranate</label>
+				<img src="/static/image/pomegranate.png" style="height: 20%; width: 20%">
+				<label>Price: Rs.90</label><br><br>
+				<p style="padding-left: 70px"><button type="submit" id = "btn-cart" onclick="cart4(this)">Add to Cart</button></p>
+			</div>
+
+			<div class="col-md-4">
+				<label>watermelon</label>
+				<img src="/static/image/watermelon.png" style="height: 20%; width: 20%">
+				<label>Price: Rs.105</label><br><br>
+				<p style="padding-left: 75px"><button type="submit" id = "btn-cart" onclick="cart5(this)">Add to Cart</button></p>
+			</div>
+		</div>			
+		</div>		
+	</div><br><br><br><br><br>
+ 
+
+		<form action="/checkout/" method="post"  style="text-align: center;">
+			<button type="submit" id = "checkout" style="background-color: #4CAF50; font-size: 20px; border-radius: 10px; color: white">CHECK OUT</button>
+		</form>	
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+	"fruits":[
+		{
+			 "fid" : 0,
+			"name" : "apple",
+			"price" : 20
+		},
+		{
+			 "fid" : 1,
+			"name" : "banana",
+			"price" : 10
+		},
+		{
+		 	"fid" : 2,
+			"name" : "mango",
+			"price" : 50
+		},
+		{
+		 	"fid" : 3,
+			"name" : "pomegranate",
+			"price" : 90
+		},
+		{
+		 	"fid" : 4,
+			"name" : "watermelon",
+			"price" : 105
+		}
+
+	]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body><br>
+	<div class="container">
+			<div class="col-sm-6" id="myleft">
+				<legend>Checkout</legend>
+				 {% set total_amount = {'value':0} %}
+				{% for key,value in result.items() %}
+					
+				   Name: {{value[0]}}<br>
+				   Price: Rs.{{value[1]}}
+				    
+				   {%set amt = value[1] | int%}	
+				   {%if total_amount.update({"value" : amt | int + total_amount.value | int})%}
+				  {%endif%}
+				    
+				 <br><br>
+				{% endfor %}
+
+
+			<b>Grand Total: Rs.{{total_amount.value}}</b>
+			</div>
+
+			<div class="col-sm-6" id="myright">
+				<fieldset>
+				<legend>Place Order</legend>
+				<form action="/placeorder/" method="POST">
+					<input type="hidden" name="total_amount", value="{{total_amount.value}}">
+					Phone Number: <input type="text" name="number" required> <br> <br>
+					<input type="submit" value="Place Order"> <br> <br>
+				</form>
+				</fieldset>
+							
+			</div>			
+	</div>
+
+</body>
+</html>
